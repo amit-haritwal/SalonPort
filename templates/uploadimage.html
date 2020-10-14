@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loginstyle6.css') }}">
+  </head>
+  <body>
+  <div class="main-login-box">
+  <div class="login-box">
+    <h1>upload image</h1>
+    <form method="post" class="justifywidth">
+      {{form1.hidden_tag()}}
+      <div class="upload">
+          {{form1.image1(class="btn buttonupload")}}
+          {{form1.image1.label(class='uploadimagelabel')}}
+      </div>
+      <div class="upload">
+          {{form1.image2(class="btn buttonupload")}}
+          {{form1.image2.label(class='uploadimagelabel')}}
+      </div>
+      <div class="upload">
+          {{form1.image3(class="btn buttonupload")}}
+          {{form1.image3.label(class='uploadimagelabel')}}
+      </div>
+      <div class="upload">
+          {{form1.image4(class="btn buttonupload")}}
+          {{form1.image4.label(class='uploadimagelabel')}}
+      </div>
+      <div class="upload">
+          {{form1.image5(class="btn buttonupload")}}
+          {{form1.image5.label(class='uploadimagelabel')}}
+      </div>
+
+      <div class="submit-btn">
+      {{form1.submit(class='btn')}}
+      </div>
+    </form>
+      </div>
+    </div>
+  </body>
+</html>

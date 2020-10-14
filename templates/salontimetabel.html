@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loginstyle7.css') }}">
+  </head>
+  <body>
+    <div class="main-login-box">
+    <div class="login-box">
+      <h1>login</h1>
+      <form method="post" class="justifywidth">
+        {{form1.hidden_tag()}}
+        <div class="email">
+        {{form1.ctime(class='t_email',placeholder='   ')}}
+        {{form1.ctime.label(class='l_email')}}
+        </div>
+        <div class="email">
+        {{form1.otime(class='t_email',placeholder='   ')}}
+        {{form1.otime.label(class='l_email')}}
+        </div>
+        <div class="email">
+        {{form1.dayofweek()}}
+        {{form1.dayofweek.label(class='l_email_t')}}
+        </div>
+        <div class="submit-btn">
+        {{form1.Submit(class='btn')}}
+        </div>
+      </form>
+        </div>
+      </div>
+  </body>
+</html>

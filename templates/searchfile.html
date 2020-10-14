@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/searchfile1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main6.css') }}">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="menu">
+      <nav class ="nav">
+        <div class="logo">
+            <a href="#"><img class="logo" src="../static/img/background (2).jpg"></a>
+        </div>
+        <ul>
+          <form method="post" class ="searchbob1hedder">
+          <div class="search-box">
+            {{form1.hidden_tag()}}
+            {{form1.searchitem(class="search-txt" ,placeholder=" ")}}
+            {{form1.submit(class='search-btn')}}
+          </div>
+          </form>
+          <div class="login-signup">
+                    {%if session['length']==0%}
+                    <li class="header-heading">
+                      <a href="/register">Sign Up</a>
+                      <a href="/login">Login</a>
+                    </li>
+                    {%else%}
+                    <li class="header-heading">
+                      <a href="#">{{session['name']}}</a>
+                      <a href="/logout">logout</a>
+                    </li>
+          </div>
+
+          {%if session['user']!="user"%}
+          <a href="#">
+            <svg class="logo colour1">
+              <use Xlink:href="../static/img/symbol.svg#icon-cart" ></use>
+            </svg>
+          </a>
+
+          {% endif %}
+        {% endif %}
+        </ul>
+      </nav>
+  </div>
+      <form method="post" class="hiddensearchbox">
+      <div class="search-box-2">
+        {{form1.hidden_tag()}}
+        {{form1.searchitem(class="search-txt-2" ,placeholder=" ")}}
+        {{form1.submit(class='search-btn-2')}}
+      </div>
+      </form>
+<div class="main">
+  <div class="filters">
+    <div class="f_heading">
+      <label class="main-heading">filter</label>
+    </div>
+    <div class="f-cate">
+        <div class="s-f-cate"><input type="checkbox" name="" value=""><label class="normal">price low to high</label></div>
+        <div class="s-f-cate"><input type="checkbox" name="" value=""><label class="normal">price high to low</label></div>
+        <div class="s-f-cate"><input type="checkbox" name="" value=""><label class="normal">review</label></div>
+        <div class="s-f-cate"><input type="checkbox" name="" value=""><label class="normal">distance</label></div>
+        <div class="s-f-cate"><input type="checkbox" name="" value=""><label class="normal">capicity</label></div>
+        <div class="s-f-cate"><input type="checkbox" name="" value=""><label class="normal">time required</label></div>
+        <div class="s-f-cate"><input type="checkbox" name="" value=""><label class="normal">most popular</label></div>
+    </div>
+  </div>
+
+<div class="main2">
+    <div class="login-box">
+      <div class="main-box">
+        <form method="post">
+          <div class="img_of_salon">
+            <img src="static/img/background.jpg" alt="">
+          </div>
+          <div class="salon_details">
+            <div class="salonname">
+              <h1>{{session['search']}}</h1>
+            </div>
+            <div class="salon_details-sub">
+              <div class="sub-details">
+                <div class="details-1">
+                <label class="salon-emp-name">Number of barber : </label><label class ="salon-emp-count">3</label>
+                </div>
+                <div class="details-1">
+                <label class="salon-emp-name">Type of salon : </label><label class ="salon-emp-count">GENTS</label>
+                </div>
+                <div class="details-1">
+                <label class="salon-emp-name">owner name : </label><label class ="salon-emp-count">amit</label>
+                </div>
+                <div class="details-1">
+                <label class="salon-emp-name">bookings per day : </label><label class ="salon-emp-count">50</label>
+                </div>
+              </div>
+              <div class="rating">
+                <div class="sumbutbtn">
+                  {{form2.hidden_tag()}}
+                  {{form2.book(class='btn')}}
+                </div>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+              </form>
+            </div>
+          </div>
+      </div>
+
+      <div class="main-box">
+        <form method="post">
+          <div class="img_of_salon">
+            <img src="../static/img/background (3).jpg" alt="">
+          </div>
+          <div class="salon_details">
+            <div class="salonname">
+              <h1>{{session['search']}} salon</h1>
+            </div>
+            <div class="salon_details-sub">
+              <div class="sub-details">
+                <div class="details-1">
+                <label class="salon-emp-name">Number of barber : </label><label class ="salon-emp-count">4</label>
+                </div>
+                <div class="details-1">
+                <label class="salon-emp-name">Type of salon : </label><label class ="salon-emp-count">GENTS</label>
+                </div>
+                <div class="details-1">
+                <label class="salon-emp-name">owner name : </label><label class ="salon-emp-count">ROHIT</label>
+                </div>
+                <div class="details-1">
+                <label class="salon-emp-name">bookings per day : </label><label class ="salon-emp-count">100</label>
+                </div>
+              </div>
+              <div class="rating">
+                <div class="sumbutbtn">
+                  <div class="sumbutbtn">
+                    {{form2.hidden_tag()}}
+                    {{form2.book(class='btn')}}
+                  </div>
+                </div>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="mainfooter">
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="col-1">
+          <img src="static/img/logo.jpg" alt="logo" width="100%" height="100%">
+        </div>
+        <div class="col-2">
+          <div class="row-1">
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+          <div class="row-2">
+            <a href="#">About website</a>
+            <a href="#">About Creater</a>
+          </div>
+        </div>
+        <div class="col-3">
+
+          <form action="#">
+            <br>
+            <div class="h1">
+              Contact Us
+            </div>
+            <br>
+              <label>Name: </label>
+              <br><br><input  placeholder="Name" />
+              <br><br><label >Message: </label>
+              <br><br><textarea  rows="3" placeholder="Tell us what's on your mind..."></textarea><br>
+              <label >Your Email Address:</label>
+              <br><br><input  type="email" value="" required placeholder="your.name@email.com" />
+              <br><br><button>SEND</button>
+          </form>
+
+        </div>
+      </div>
+    </footer>
+    </div>
+  </body>
+</html>

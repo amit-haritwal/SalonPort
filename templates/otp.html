@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/loginstyle7.css') }}">
+    <meta charset="utf-8">
+    <title>OTP</title>
+</head>
+  <body>
+    <div class="main-login-box">
+    <div class="login-box">
+      <h1>OTP VERIFICATION</h1>
+      <form method="post" class="justifywidth">
+        <h3 class="subheading">Your OTP is send to your Mail Id : {{session['email1']}}</h3>
+        <h3 class="subheading">And also to your Phone Number : {{session['phone1']}}</h3>
+        {{form1.hidden_tag()}}
+        <div class="email">
+        {{form1.otp(class='t_email',placeholder='   ')}}
+        {{form1.otp.label(class='l_email')}}
+        </div>
+        <div class="submit-btn">
+        {{form1.submit(class='btn')}}
+        </div>
+      </form>
+        </div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loginstyle7.css') }}">
+  </head>
+  <body>
+<div class="provider-btn">
+    <a class="providerbutn" href="loginprovider">Login as Provider</a>
+</div>
+  <div class="main-login-box">
+  <div class="login-box">
+    <h1>login</h1>
+    <form method="post" class="justifywidth">
+      {{form1.hidden_tag()}}
+      <div class="email">
+      {{form1.email(class='t_email',placeholder='   ')}}
+      {{form1.email.label(class='l_email')}}
+      </div>
+      <div class="email">
+          {{form1.password(class='t_email',placeholder='   ')}}
+          {{form1.password.label(class='l_email')}}
+      </div>
+      <div class="submit-btn">
+      {{form1.submit(class='btn')}}
+      </div>
+    </form>
+
+    {%if session['password1']==1%}
+    <div class="atherpages">
+        <div class="f_password">
+          <a href="/forgotpassword"class="nreg">Forget Password</a>
+        </div>
+        <div class="signup">
+          <a href="/register_user" class="nreg">Not register click here!!</a>
+        </div>
+    </div>
+              {%else%}
+
+              {% endif %}
+      </div>
+    </div>
+  </body>
+</html>

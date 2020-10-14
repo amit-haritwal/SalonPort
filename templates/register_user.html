@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loginstyle6.css') }}">
+  </head>
+  <body>
+<div class="provider-btn">
+    <a class="providerbutn" href="/register_provider">register as Provider</a>
+</div>
+  <div class="main-login-box">
+  <div class="login-box">
+    <h1>SIGN UP</h1>
+    <form method="post" class="justifywidth">
+      {{register_form.hidden_tag()}}
+      <div class="email">
+      {{register_form.name(class='t_email',placeholder='   ')}}
+      {{register_form.name.label(class='l_email')}}
+      </div>
+      <div class="email">
+          {{register_form.email(class='t_email',placeholder='   ')}}
+          {{register_form.email.label(class='l_email')}}
+      </div>
+      <div class="email">
+          {{register_form.phone(class='t_email',placeholder='   ')}}
+          {{register_form.phone.label(class='l_email')}}
+      </div>
+      <div class="maingender">
+          {{register_form.gender.label(class='gender')}}{{register_form.gender(class="radiogender")}}
+      </div>
+      <div class="email">
+          {{register_form.password(class='t_email',placeholder='   ')}}
+          {{register_form.password.label(class='l_email')}}
+      </div>
+      <div class="email">
+          {{register_form.confirmpassword(class='t_email',placeholder='   ')}}
+          {{register_form.confirmpassword.label(class='l_email')}}
+      </div>
+      <div class="submit-btn">
+      {{register_form.submit(class='btn')}}
+      </div>
+    </form>
+      </div>
+    </div>
+  </body>
+</html>

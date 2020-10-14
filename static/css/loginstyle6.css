@@ -1,0 +1,244 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  background: url("../img/background (4).jpg") ;
+  background-size: cover ; }
+  .uploadimagelabel
+  {
+    color: white;
+    font-size: 2rem;
+  }
+  .upload
+  {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .buttonupload
+  {
+    width: 80% !important;
+  }
+.login-box
+{
+  margin-top:2rem !important;
+}
+.maingender
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h2
+{
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right,blue,lightblue,blue);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+.radiogender
+{
+  display: flex;
+  margin-left: 4rem;
+  justify-content: space-around;
+  flex-direction: row;
+  color: white;
+  font-size: 1.5rem;
+}
+.gender
+{
+  align-self: flex-start;
+  font-size: 1.8rem;
+  color: white;
+}
+.justifywidth
+{
+  width: 100% !important;
+}
+.main-login-box {
+  display: flex;
+  align-items: center;
+  width: 100% !important;
+  justify-content: center; }
+.submit-btn{
+  display: flex;
+  justify-content: center;
+}
+.login-box {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  box-shadow: 1rem 1rem 1rem 1rem #000000; }
+  @media (max-device-width: 37.5em) {
+    .login-box {
+      width: 100%; } }
+.t_name, .t_phone, .t_email, .t_pass, .t_c_pass {
+  z-index: 100;
+  border: none;
+  height: 2rem;
+  background: transparent;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  border-bottom: 1px solid white;
+  color: white; }
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, red, black);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold; }
+.btn {
+  align-self: center;
+  width: 15rem;
+  margin-top: 2rem;
+  height: 3.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  background-image: linear-gradient(to left top, #2b2b8c, #7a89d6); }
+
+.l_name, .l_phone, .l_email {
+  z-index: 50;
+  font-size: 1.8rem;
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: -3rem;
+  transition: all .5s;
+  animation-timing-function: ease-in-out; }
+
+.name, .phone, .email, .pass, .c_pass {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse; }
+
+.c_pass, .pass {
+  flex-direction: column; }
+
+.t_email:focus ~ .l_email,
+.t_email:not(:placeholder-shown) ~ .l_email
+{
+  margin-bottom: -1.2rem;
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  color: #0b6bfb;
+}
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.t_c_pass, .t_pass {
+  -webkit-text-security: circle; }
+
+.main-pass {
+  display: flex;
+  position: relative;
+  flex-direction: column; }
+
+.l_c_pass, .l_pass {
+  margin-top: -4rem;
+  z-index: 50;
+  font-size: 1.8rem;
+  color: white;
+  transition: all .5s;
+  animation-timing-function: ease-in-out; }
+
+.showpass {
+  height: 2rem;
+  width: 2rem;
+  margin-left: 95%;
+  z-index: 1000000;
+  opacity: 0;
+  border: none; }
+
+.showpassworddiv {
+  margin-left: 95%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: flex-end;
+  margin-top: -2rem;
+  margin-bottom: -3rem;
+  z-index: -99999;
+  background: url("../img/SVG/eye.svg");
+  background-size: cover; }
+
+.showpass:checked + div .showpassworddiv {
+  background: url("../img/SVG/eye-blocked.svg");
+  background-size: cover; }
+
+.showpass:checked + div .t_pass,
+.showpass:checked + div .t_c_pass {
+  -webkit-text-security: none; }
+
+.c_pass, .pass {
+  margin-top: 3rem; }
+
+.validation {
+  color: red;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase; }
+
+.atherpages {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  font-size: 1.8rem;
+  margin-bottom: 2rem; }
+
+.atherpages a {
+  color: orangered;
+  text-transform: uppercase; }
+
+h1 {
+  background-image: linear-gradient(to left, blue, lightblue, white, lightblue, blue); }
+
+.provider-btn {
+  font-size: 2rem;
+  width: 20%;
+  color: red;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: .2rem .2rem .2rem .2rem white;
+  border-radius: 2rem; }
+
+.login-box {
+  margin-top: 8rem;
+  box-shadow: .2rem .2rem .2rem .2rem white; }
+
+.showpassworddiv {
+  margin-left: 95%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: flex-end;
+  margin-top: -2rem;
+  margin-bottom: -3rem;
+  z-index: -99999;
+  background: url("../img/SVG/eye.svg");
+  background-size: cover; }
+
+.showpass:checked + div .showpassworddiv {
+  background: url("../img/SVG/eye-blocked.svg");
+  background-size: cover; }

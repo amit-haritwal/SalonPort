@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/selectionofsalon.css') }}">
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+    function changeImage(imgName)
+  {
+     image = document.getElementById('theimage');
+     image.src = imgName;
+  }
+</script>
+  </head>
+  <body>
+    <div class="menu">
+      <nav class ="nav">
+        <div class="logo">
+            <a href="#"><img class="logo" src="../static/img/background (2).jpg"></a>
+        </div>
+        <ul>
+          <form method="post" class ="searchbob1hedder">
+          <div class="search-box">
+            {{form1.hidden_tag()}}
+            {{form1.searchitem(class="search-txt" ,placeholder=" ")}}
+            {{form1.submit(class='search-btn')}}
+          </div>
+          </form>
+          <div class="login-signup">
+                    {%if session['length']==0%}
+                    <li class="header-heading">
+                      <a href="/register">Sign Up</a>
+                      <a href="/login">Login</a>
+                    </li>
+                    {%else%}
+                    <li class="header-heading">
+                      <a href="#">{{session['name']}}</a>
+                      <a href="/logout">logout</a>
+                    </li>
+          </div>
+
+          {%if session['user']!="user"%}
+          <a href="#">
+            <svg class="logo colour1">
+              <use Xlink:href="../static/img/symbol.svg#icon-cart" ></use>
+            </svg>
+          </a>
+
+          {% endif %}
+        {% endif %}
+        </ul>
+      </nav>
+  </div>
+      <form method="post" class ="hiddensearchbox">
+      <div class="search-box-2">
+        {{form1.hidden_tag()}}
+        {{form1.searchitem(class="search-txt-2" ,placeholder=" ")}}
+        {{form1.submit(class='search-btn-2')}}
+      </div>
+      </form>
+    <!-- this is header -->
+<div class="main">
+  <div class="main2">
+    <div class="login-box">
+        <div class="imageslideshow">
+            <div class="mainimage">
+              <div class="imagebig">
+                <img class="sizeofbigimage" id="theimage" src="../static/img/background (3).jpg" alt="">
+              </div>
+            </div>
+            <div class="allimages">
+              <div class="imagesmall">
+                <input type="radio" name="showimge" class ="showimge" value="" onClick="changeImage('../static/img/background (3).jpg');" checked="">
+                <img class="sizeofsmallimage" src="../static/img/background (3).jpg" alt="">
+              </div>
+              <div class="imagesmall">
+                <input type="radio" name="showimge" class ="showimge" onClick="changeImage('../static/img/background.jpg');" value="">
+                <img class="sizeofsmallimage" src="../static/img/background.jpg" alt="">
+              </div>
+              <div class="imagesmall">
+                <input type="radio" name="showimge" class ="showimge" onClick="changeImage('../static/img/background (3).jpg');" value="">
+                <img class="sizeofsmallimage" src="../static/img/background (3).jpg" alt="">
+              </div>
+              <div class="imagesmall">
+                <input type="radio" name="showimge" class ="showimge" onClick="changeImage('../static/img/background.jpg');" value="">
+                <img class="sizeofsmallimage" src="../static/img/background.jpg" alt="">
+              </div>
+              <div class="imagesmall">
+                <input type="radio" name="showimge" class ="showimge" onClick="changeImage('../static/img/background (3).jpg');" value="">
+                <img class="sizeofsmallimage" src="../static/img/background (3).jpg" alt="">
+              </div>
+            </div>
+            <div class="discriptionsalon">
+                <div class="salon_details">
+                  <div class="salonname">
+                    <h1>{{session['salonname']}} Amit haritwla is bestt</h1>
+                  </div>
+                  <div class="salon_details-sub">
+                    <div class="sub-details">
+                      <div class="details-1">
+                      <label class="salon-emp-name">Number of barber : </label><label class ="salon-emp-count">3</label>
+                      </div><br><br>
+                      <div class="details-1">
+                      <label class="salon-emp-name">Type of salon : </label><label class ="salon-emp-count">GENTS</label>
+                      </div><br><br>
+                      <div class="details-1">
+                      <label class="salon-emp-name">owner name : </label><label class ="salon-emp-count">amit</label>
+                      </div><br><br>
+                      <div class="details-1">
+                      <label class="salon-emp-name">bookings per day : </label><label class ="salon-emp-count">50</label>
+                      </div>
+                      <br><br>
+                      <div class="rating">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="main">
+<div class="main2">
+  <div class="login-box">
+    <h1>SELECT SERVICES</h1>
+  <div class="maintable">
+    <table>
+      <tr>
+        <th>employer name</th>
+        <th>time required</th>
+        <th>services required</th>
+        <th>customer name</th>
+        <th>booking time</th>
+        <th>booking status</th>
+      </tr>
+      {{form3.hidden_tag()}}
+      <tr>
+        <td>amit</td>
+        <td>20:00</td>
+        <td>hair cut</td>
+        <td>rohit</td>
+        <td>20:00</td>
+        <td>{{form3.cataloge()}}</td>
+      </tr>
+      <tr>
+        <td>amit</td>
+        <td>20:00</td>
+        <td>hair cut</td>
+        <td>gautam</td>
+        <td>20:40</td>
+        <td>{{form3.cataloge()}}</td>
+      </tr>
+
+      <tr>
+        <td>amit</td>
+        <td>20:00</td>
+        <td>hair cut</td>
+        <td>vikas</td>
+        <td>21:00</td>
+        <td>{{form3.cataloge()}}</td>
+      </tr>
+
+      <tr>
+        <td>amit</td>
+        <td>20:00</td>
+        <td>hair cut</td>
+        <td>yash</td>
+        <td>21:30</td>
+        <td>{{form3.cataloge()}}</td>
+      </tr>
+    </table>
+  </div>
+  </div></div>
+</div>
+<div class="main">
+<div class="main2">
+  <div class="login-box">
+    <h1>SELECT your barber</h1>
+  <div class="maintable">
+    <table>
+      <tr>
+        <th>employer name</th>
+        <th>time required</th>
+        <th>services required</th>
+        <th>customer name</th>
+        <th>booking time</th>
+        <th>booking status</th>
+      </tr>
+      <tr>
+        <td>amit</td>
+        <td>20:00</td>
+        <td>hair cut</td>
+        <td>rohit</td>
+        <td>20:00</td>
+        <td>{{form3.cataloge()}}</td>
+      </tr>
+
+      <tr>
+        <td>amit</td>
+        <td>20:00</td>
+        <td>hair cut</td>
+        <td>gautam</td>
+        <td>20:40</td>
+        <td>{{form3.cataloge()}}</td>
+      </tr>
+
+      <tr>
+        <td>amit</td>
+        <td>20:00</td>
+        <td>hair cut</td>
+        <td>vikas</td>
+        <td>21:00</td>
+        <td>{{form3.cataloge()}}</td>
+      </tr>
+
+      <tr>
+        <td>amit</td>
+        <td>20:00</td>
+        <td>hair cut</td>
+        <td>yash</td>
+        <td>21:30</td>
+        <td>{{form3.cataloge()}}</td>
+      </tr>
+    </table>
+  </div><div class="sumbit-btn">
+    <button type="button" class="btn" name="button">BOOK</button>
+  </div>
+  </div>
+  </div>
+</div>
+</body>
+</html>

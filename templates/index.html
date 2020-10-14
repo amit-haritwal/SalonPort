@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Salon Port</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main6.css') }}">
+</head>
+<body>
+	<!-- this is header -->
+	<div class="menu">
+		<nav class ="nav">
+			<div class="logo">
+					<a href="#"><img class="logo" src="../static/img/background (2).jpg"></a>
+			</div>
+			<ul>
+				<form method="post" class ="searchbob1hedder">
+				<div class="search-box">
+					{{form1.hidden_tag()}}
+					{{form1.searchitem(class="search-txt" ,placeholder=" ")}}
+					{{form1.submit(class='search-btn')}}
+				</div>
+				</form>
+				<div class="login-signup">
+									{%if session['length']==0%}
+									<li class="header-heading">
+										<a href="/register">Sign Up</a>
+										<a href="/login">Login</a>
+									</li>
+									{%else%}
+									<li class="header-heading">
+										<a href="#">{{session['Name']}}</a>
+										<a href="/logout">logout</a>
+									</li>
+				</div>
+
+				{%if session['user']!="user"%}
+				<a href="#">
+					<svg class="logo colour1">
+						<use Xlink:href="../static/img/symbol.svg#icon-cart" ></use>
+					</svg>
+				</a>
+
+				{% endif %}
+			{% endif %}
+			</ul>
+		</nav>
+</div>
+		<form method="post">
+		<div class="search-box-2">
+			{{form1.hidden_tag()}}
+			{{form1.searchitem(class="search-txt-2" ,placeholder=" ")}}
+			{{form1.submit(class='search-btn-2')}}
+		</div>
+		</form>
+	<!-- this is header -->
+</body>
+</html>

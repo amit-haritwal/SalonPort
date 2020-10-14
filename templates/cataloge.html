@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="static/css/cataloge1.css">
+  </head>
+  <body>
+<form  action="/uploadimage">
+      <div class="main">
+        <div class="login-box">
+          <div class="main-heading">
+            <h1>upload your catalog</h1>
+          </div>
+
+              <div class="details_of_catalog">
+                <label class="label">sr no</label>
+                <label class="label">name of item</label>
+                <label class="label">price</label>
+                <label class="label">time</label>
+                <label class="label">discription</label>
+              </div>
+              <div class="details_of_catalog">
+                <label class="label-1 ">1.</label>
+                <input type="text" class="p_name" required="">
+                <input type="number" class="p_amt" required="">
+                <input type="time" class="p_time" required="">
+                <input type="text" class="p_disc" required="">
+              </div>
+              <div class="details_of_catalog">
+                <label class="label-1">2.</label>
+                <input type="text" class="p_name" required="">
+                <input type="number" class="p_amt" required="">
+                <input type="time" class="p_time" required="">
+                <input type="text" class="p_disc" required="">
+              </div>
+              <div class="details_of_catalog">
+                <label class="label-1">3.</label>
+                <input type="text" class="p_name" required="">
+                <input type="number" class="p_amt" required="">
+                <input type="time" class="p_time" required="">
+                <input type="text" class="p_disc" required="">
+              </div>
+              <div class="details_of_catalog">
+                <label class="label-1">4.</label>
+                <input type="text" class="p_name" required="">
+                <input type="number" class="p_amt" required="">
+                <input type="time" class="p_time" required="">
+                <input type="text" class="p_disc" required="">
+              </div>
+              <div class="details_of_catalog">
+                <label class="label-1">5.</label>
+                <input type="text" class="p_name" required="">
+                <input type="number" class="p_amt" required="">
+                <input type="time" class="p_time" required="">
+                <input type="text" class="p_disc" required="">
+              </div>
+                <span id="responce"></span>
+              <div class="smtbtn">
+                  <button class="btn">sumbit</button>
+                  <input type="button" onclick="addInput()" class="btn" value="add data">
+              </div>
+
+<script>
+var countBox =6;
+var boxName = 0;
+function addInput()
+{
+     var boxName="textBox"+countBox;
+document.getElementById('responce').innerHTML+='<div class="details_of_catalog">
+<label class="label-1">'+countBox+'.</label>
+<input type="text" class="p_name" required="" name=p_name"'+countBox+'">
+<input type="number" class="p_amt" required="" name=p_amt"'+countBox+'">
+<input type="time" class="p_time" required="" name=p_time"'+countBox+'">
+<input type="text" class="p_disc" required="" name=p_disc"'+countBox+'"></div>';
+     countBox += 1;
+}
+</script>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

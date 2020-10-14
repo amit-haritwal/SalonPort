@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loginstyle6.css') }}">
+  </head>
+  <body>
+  <div class="main-login-box">
+  <div class="login-box">
+
+    <h1>Employer details</h1>
+    <form method="post" class="justifywidth">
+      {{form1.hidden_tag()}}
+      <h2>Employer number {{session['noofemp']}}</h2>
+      <div class="email">
+      {{form1.name(class='t_email',placeholder='   ')}}
+      {{form1.name.label(class='l_email')}}
+      </div>
+      <div class="email">
+      {{form1.phone(class='t_email',placeholder='   ')}}
+      {{form1.phone.label(class='l_email')}}
+      </div>
+      <div class="email">
+      {{form1.email(class='t_email',placeholder='   ')}}
+      {{form1.email.label(class='l_email')}}
+      </div>
+      <div class="maingender">
+          {{form1.gender.label(class='gender')}}{{form1.gender(class="radiogender")}}
+      </div>
+      <div class="submit-btn">
+      {{form1.submit(class='btn')}}
+      </div>
+    </form>
+      </div>
+    </div>
+  </body>
+</html>
